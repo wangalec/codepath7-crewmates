@@ -19,17 +19,21 @@ const DisplayPlayers = () => {
 
     return(
         <>
-            {players &&
-            players.map((player) => 
+            {players && players.length > 0 ?
+                players.map((player) => 
+                    <>
+                        <PlayerCard
+                            id={player.id}
+                            name={player.name}
+                            role={player.role}
+                            description={player.description}
+                        />
+                    </>
+                )
+            : 
                 <>
-                    <PlayerCard
-                        name={player.name}
-                        role={player.role}
-                        description={player.description}
-                    />
-                    <Link to={`/edit/${player.id}`}> Edit Player</Link>
+                    <h2> No Players Found, please create a player</h2>
                 </>
-            )
             }
         </>
     )

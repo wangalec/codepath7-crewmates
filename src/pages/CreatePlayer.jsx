@@ -41,7 +41,7 @@ const CreatePlayer = () => {
                 <br/>
 
                 <label> Description</label>
-                <textarea type="text" name="description" value={player.description} onChange={handleChange}/>
+                <textarea rows="5" cols="50" type="text" name="description" value={player.description} onChange={handleChange}/>
                 <br/>
 
                 <button onClick={createPlayer}> Submit </button>

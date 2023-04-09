@@ -58,7 +58,7 @@ const EditPlayer = () => {
                 <input type="text" name="role" value={player.role} onChange={handleChange}/>
 
                 <label> Description</label>
-                <textarea type="text" name="description" value={player.description} onChange={handleChange}/>
+                <textarea rows="5" cols="50" type="text" name="description" value={player.description} onChange={handleChange}/>
 
                 <button onClick={updatePlayer}> Submit </button>
                 </form>
